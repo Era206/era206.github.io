@@ -946,20 +946,13 @@ Non-Government Websites</h4>
       <h3>Painting</h3>
     </div>
 
-    <div>
-      <p><br/>
-       Social media platform:  <a href="blank" class="btn btn-primary" target="_blank"><i class="fab fa-instagram"></i> Instagram </a> <a href="blank" class="btn btn-tertiary" target="_blank"><i class="fab fa-pinterest"></i> Pinterest </a>
-      </p>
-    </div>
 
     <div id="filter-controls">
       Filter by:   
       <button class="genre-button" data-genre="all">All</button>
-      <button class="genre-button" data-genre="charcoal">Charcoal</button>
       <button class="genre-button" data-genre="digitalart">Digital Art</button>
       <button class="genre-button" data-genre="pastel">Pastel</button>
       <button class="genre-button" data-genre="watercolor">Watercolor</button>
-      <button class="genre-button" data-genre="doodle">Doodle</button>
     </div>
 
     <div >[ Click on the picture to view on full resolution. ]</div>
@@ -1031,10 +1024,6 @@ Non-Government Websites</h4>
 
   
   const photos = [
-  // { url: 'assets/img/painting/fish.jpg', genre: 'digitalart', caption: 'Goldfish dreams', description: 'medium: Sketchbook' },
-  // { url:  'assets/img/painting/balloon.jpg', genre: 'watercolor', caption: 'Voyage', description: 'This was my first watercolor attempt' },
-  // { url: 'assets/img/painting/petals.jpg', genre: 'pastel', caption: 'Dew drops', description: 'Medium: Pastel' },
-  
   { url: 'assets/img/painting/Dream.jpg', genre: 'pastel', caption: 'Dream', description: 'How I used to dream to see myself, drawn by me in quarantine 2020. Medium: Pencil & Pastel' },
   { url: 'assets/img/painting/Family.jpg', genre: 'watercolor', caption: 'Family', description: 'In the bright sunny days or in the gloomy ones, is not it family that stays? Medium: Water Color' },
   { url: 'assets/img/painting/Monster Inc_.jpg', genre: 'watercolor', caption: 'Innocence', description: 'I love how innocent minds change the steriotypical world with their positivity, and so I love this cartoon.  Medium: Water Color' },
@@ -1044,52 +1033,10 @@ Non-Government Websites</h4>
   { url: 'assets/img/painting/bangla.jpg ', genre: 'watercolor', caption: 'Bangla', description: 'I painted this image after my visit to Shilpakala Academy, can you find me in this picture?  Medium: Water Color' },
   { url: 'assets/img/painting/brave.jpg ', genre: 'watercolor', caption: 'Brave', description: 'I found myself in Merida, so I drew her.  Medium: Water Color' },
   { url: 'assets/img/painting/corona.jpg ', genre: 'watercolor', caption: '2020', description: 'This was my small tribiute to the doctors during Corona time.  Medium: Water Color' },
-  { url: 'assets/img/painting/dance.jpg ', genre: 'Pastel', caption: 'Dance', description: 'As you can see, I love to dance.  Medium: Pastel and Pencil' },
+  { url: 'assets/img/painting/dance.jpg ', genre: 'pastel', caption: 'Dance', description: 'As you can see, I love to dance.  Medium: Pastel and Pencil' },
   { url: 'assets/img/painting/one_day.jpg ', genre: 'watercolor', caption: 'Leisure', description: 'Just how I dreamt my leisure place should be...  Medium: Water Color' },
   { url: 'assets/img/painting/wall.e.jpg ', genre: 'watercolor', caption: 'WallE', description: 'I love how they love each other.  Medium: Water Color' },
-  { url: 'assets/img/painting/water_under_bridge.jpg ', genre: 'watercolor', 'pastel', caption: 'Bridge', description: 'It was my first attempt to 3d art, I loved the outcome.  Medium: Water Color' },
-  // { url: 'assets/img/painting/mothersday.jpg', genre: 'digitalart', caption: 'Mother', description: 'I love my mother more than anything in the world. To me, she is the definition of my existence. Medium: Sketchbook' },
-    
-
-  // { url: 'assets/img/painting/freedom.jpg', genre: 'charcoal', caption: 'Liberation', description: 'Liberation is not an unearned gift. Medium: Charcoal' },
- 
-  //  { url: 'assets/img/painting/gossip.jpg', genre: 'pastel', caption: 'Gossips', description: 'This is a very old work , it was showcased in photo exhibition of Holy Cross College in 2016. Medium: Pastel' },
-  //  { url: 'assets/img/painting/girlinfield.jpg', genre: 'digitalart', caption: 'Stargazing', description: 'Touching the sky was always a dream in childhood :) Medium: Sketchbook' },
- 
-  //  { url: 'assets/img/painting/girl.jpg', genre: 'digitalart', caption: 'Alone', description: 'Loneliness isnot a myth while destination is unknown  :) Medium: Sketchbook' },
-  //  { url: 'assets/img/painting/eye.jpg', genre: 'pastel', caption: 'Eye', description: 'Eye speaks thousands. Medium: Pastel' },
-    
-  //  { url: 'assets/img/painting/peterpan.jpg', genre: 'digitalart', caption: 'Peter Pan', description: 'One of my most favorite childhood cartoon was peter pan. Medium: Sketchbook' },
-  //  { url: 'assets/img/painting/mirror.jpg', genre: 'pastel', caption: 'Mirror', description: 'So many faces we see of ourselves in the mirror. Medium: Pastel' },
-
-
-  //  { url: 'assets/img/painting/pikachu.jpg', genre: 'digitalart', caption: 'Pikachu', description: 'Medium: Sketchbook' },
-  //  { url: 'assets/img/painting/clock.png', genre: 'doodle', caption: 'Clock' },
-   
-  //  { url: 'assets/img/painting/flamingo.jpg', genre: 'digitalart', caption: 'Flamingo Dreams', description: 'Childhood dream was to fly in a paper airplane. Medium: Digital art , sketchbook' },
- 
-  //  { url: 'assets/img/painting/wolverine.jpg', genre: 'charcoal', caption: 'X-Man', description: 'Medium: Charcoal' },
-  
-  // { url: 'assets/img/painting/friends.jpg', genre: 'charcoal', caption: 'Friends', description: 'Medium: Charcoal' },
-  //  { url: 'assets/img/painting/logo3.jpg', genre: 'digitalart', caption: 'A Rainy Night', description: 'Rains falling from sky, stop a moment and enjoy. Medium: Digital art , sketchbook' },
-  
-  // { url: 'assets/img/painting/cowardlydog.jpg', genre: 'digitalart', caption: 'Courage- the cowardly dog', description: 'Sometimes I am afraid of unknown. Then I feel like this cowardly dog- courage. Medium: Digital art , sketchbook' },
-  // { url: 'assets/img/painting/powerpuff.jpg', genre: 'digitalart', caption: 'Powerpuff girls', description: 'And the day is saved, thanks to the.... Medium: Digital art , sketchbook' },
-  
-
-  //  { url: 'assets/img/painting/mrbean.jpg', genre: 'digitalart', caption: 'Mr Bean', description: 'Who isnot a fan of Mr. Bean? Medium: Digital art , sketchbook' },
-  
-  //  { url: 'assets/img/painting/sunset.jpg', genre: 'watercolor', caption: 'Sunset', description: 'Very earlier watercolor days.' },
-  //  { url: 'assets/img/painting/pineasferb.jpg', genre: 'digitalart', caption: 'Phineas and Ferb', description: ' Medium: Digital art , sketchbook' },
-  //  { url: 'assets/img/painting/turtle.jpg', genre: 'doodle', caption: 'Turtle' },
-   
-  //  { url: 'assets/img/painting/heihei.jpg', genre: 'digitalart', caption: 'Hei hei', description: 'Remember heihei, the dumb chicken. Medium: Digital art , sketchbook' },
-  
-  // { url: 'assets/img/painting/child.jpg', genre: 'charcoal', caption: 'Child', description: 'Medium: Charcoal' },
-  // { url: 'assets/img/painting/fairy2.jpg', genre: 'digitalart', caption: 'Happiness Fairy', description: 'They say happiness is a fairy, living in flowers. Medium: Digital art , sketchbook' },
-  // { url: 'assets/img/painting/pooh.jpg', genre: 'digitalart', caption: 'Winnie the pooh', description: ' Medium: Digital art , sketchbook' },
-  
-
+  { url: 'assets/img/painting/water_under_bridge.jpg ', genre: 'pastel', caption: 'Bridge', description: 'It was my first attempt to 3d art, I loved the outcome.  Medium: Pastel' },
   ];
 
 const photosPerPage = 8;
