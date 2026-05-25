@@ -2391,9 +2391,7 @@ section {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
   text-align: center;
-
-  height: auto;
-  margin-bottom: 20px;
+  height: 100%;
 }
 .blog-card img {
   height: 200px; /* set the same height for all images */
@@ -2408,6 +2406,8 @@ section {
 .blog-card p {
   font-size: 0.95rem;
   color: #555;
+  max-height: 360px;
+  overflow-y: auto;
 }
 .blog-card:hover {
   transform: translateY(-5px);
