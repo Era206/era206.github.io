@@ -1688,25 +1688,25 @@ section {
 .btn-primary {
   background-color: #5b5cba;
 }
-.btn-primary:hover {
+.btn-primary :hover {
   background-color: #62707e;
 }
 .btn-secondary {
   background-color: #3a945a;
 }
-.btn-secondary:hover {
+.btn-secondary :hover {
   background-color: #62707e;
 }
 .btn-tertiary {
   background-color: #d86230;
 }
-.btn-tertiary:hover {
+.btn-tertiary :hover {
   background-color: #62707e;
 }
 .btn-red {
   background-color: #d61010;
 }
-.btn-red:hover {
+.btn-red :hover {
   background-color: #62707e;
 }
 .btn-underReview {
@@ -1744,83 +1744,7 @@ section {
 # My Project
 --------------------------------------------------------------*/
 
-/* Academic Project Filters - same style as Research Works */
 
-#academicprojects .genre-filter {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
-
-  width: 80%;
-  margin: 30px auto 40px auto;
-}
-
-#academicprojects .genre-box {
-  background: #ffffff;
-  border: 2px solid #ff5303;
-
-  padding: 10px;
-  height: auto;
-
-  flex: 1;
-
-  box-shadow: 0 0 15px rgba(255, 180, 5, 0.7);
-
-  text-align: center;
-  cursor: pointer;
-
-  color: #000000;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-              background-color 0.3s ease;
-}
-
-#academicprojects .genre-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(255, 18, 1, 0.6);
-}
-
-#academicprojects .genre-box.selected {
-  background: #e14e09;
-  border: 2px solid #e14e09;
-
-  color: #ffffff;
-
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-#academicprojects .genre-box label {
-  font-size: 1em;
-  color: inherit;
-  margin: 0;
-  display: block;
-  cursor: pointer;
-}
-
-
-/* Responsive */
-
-@media (max-width: 1200px) {
-  #academicprojects .genre-filter {
-    width: 95%;
-    flex-wrap: wrap;
-  }
-
-  #academicprojects .genre-box {
-    flex: 1 1 180px;
-  }
-}
-
-@media (max-width: 600px) {
-  #academicprojects .genre-filter {
-    gap: 10px;
-  }
-
-  #academicprojects .genre-box {
-    flex: 1 1 calc(50% - 10px);
-  }
-}
 /* 
 #fundedprojects {
   padding: 50px 0;
@@ -1948,51 +1872,123 @@ section {
 }
 
 
+/* ==========================================================
+   Academic Projects
+   Styled to match Research Works
+   ========================================================== */
 
+/* ---------- Filter container ---------- */
 
-/* Academic Project Cards */
-
-#academicprojects .project-container {
-  width: 94%;
-  max-width: 1800px;
-  margin: 0 auto;
-}
-
-#academicprojects .project-items {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
-  margin: 0;
-  padding: 0;
-  align-items: stretch;
-}
-
-#academicprojects .project-item {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-
-  width: auto;
-  min-width: 0;
-  height: 100%;
-  box-sizing: border-box;
-
+#academicprojects .genre-filter {
   display: flex;
-  flex-direction: column;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 15px;
+}
+
+
+/* ---------- Individual filter ---------- */
+
+#academicprojects .genre-box {
+  background: #ffffff;
+  border: 2px solid #ff5303;
+
+  padding: 10px;
+  flex: 1;
+
+  text-align: center;
+  cursor: pointer;
+
+  box-shadow: 0 0 15px rgba(255, 180, 5, 0.7);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+/* Same hover behavior as Research Works */
+
+#academicprojects .genre-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 18, 1, 0.6);
+}
+
+
+/* Selected filter = same orange as Research */
+
+#academicprojects .genre-box.selected {
+  background: #e14e09;
+  color: #ffffff;
+
+  border: 1px solid #ddd;
 
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: none;
 }
+
+
+/* ---------- Projects grid ---------- */
+
+#academicprojects .project-items {
+  display: grid;
+
+  /*
+   Same principle as .works in Research Works.
+   3 cards per row on normal desktop screens.
+  */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  padding: 20px;
+
+  margin-left: 9rem;
+  margin-right: 8rem;
+  margin-top: 2rem;
+}
+
+
+/* ---------- Individual project card ---------- */
+
+#academicprojects .project-item {
+  background: #f9f9f9;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  padding: 20px;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  width: auto;
+}
+
+
+/* EXACT same hover style as Research Works */
 
 #academicprojects .project-item:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 
-/* Project Titles */
+/* ---------- Project title ---------- */
+
+/*
+This deliberately overrides project-name1,
+project-name2, etc. so every project follows
+the Research Works visual language.
+*/
 
 #academicprojects .project-name1,
 #academicprojects .project-name2,
@@ -2001,153 +1997,123 @@ section {
 #academicprojects .project-name5 {
   font-family: "Raleway", sans-serif;
 
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: 1.5em;
+  font-weight: 500;
 
-  color: #343a40;
+  color: rgb(27, 36, 26);
 
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
   padding: 0;
 
-  background: none;
-  text-shadow: none;
+  display: block;
 
+  background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
 
-  display: block;
+  text-shadow: none;
 }
 
 
-/* Project Images */
+/* ---------- Images ---------- */
+
+/*
+Every project image gets EXACTLY the same
+display area regardless of original dimensions.
+*/
 
 #academicprojects .project-image,
 #academicprojects .project-item img {
+  display: block;
+
   width: 100%;
-  height: 210px;
+  height: 230px;
 
   object-fit: contain;
 
+  margin: 0 0 20px 0;
+
+  border-radius: 5px;
+
   background: #ffffff;
-
-  display: block;
-
-  margin: 15px 0 18px 0;
-
-  border-radius: 4px;
 }
 
 
-/* Project Description */
+/* ---------- Project text ---------- */
 
 #academicprojects .project-item p {
-  font-size: 14px;
-  line-height: 1.6;
-
-  color: #555;
-
-  margin-bottom: 0;
-}
-
-#academicprojects .project-item p b {
+  font-size: 1em;
   color: #333;
-  font-weight: 600;
+
+  line-height: 1.5;
+
+  margin-bottom: 10px;
 }
 
 
-/* Project Buttons */
+/* ---------- Buttons ---------- */
 
-#academicprojects .project-links {
-  margin-top: auto;
-  padding-top: 18px;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-}
-
-#academicprojects .project-links .btn {
-  margin: 0;
-  padding: 8px 14px;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  border-radius: 4px;
-}
-
-#academicprojects .project-links .btn-tertiary {
-  background-color: #d86230;
-  color: #fff;
-}
-
-#academicprojects .project-links .btn-tertiary:hover {
-  background-color: #b94d21;
-  color: #fff;
-}
-
-#academicprojects .project-links .btn-primary {
-  background-color: #5b5cba;
-  color: #fff;
-}
-
-#academicprojects .project-links .btn-primary:hover {
-  background-color: #48499f;
-  color: #fff;
-}
-
-#academicprojects .project-links .btn-red {
-  background-color: #d61010;
-  color: #fff;
-}
-
-#academicprojects .project-links .btn-red:hover {
-  background-color: #b30d0d;
-  color: #fff;
+#academicprojects .project-item .btn {
+  margin-left: 0;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 
-/* Academic Project Responsive Layout */
+/* ==========================================================
+   Responsive
+   ========================================================== */
 
-@media (max-width: 1400px) {
-  #academicprojects .project-items {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 992px) {
-  #academicprojects .project-container {
-    width: 96%;
-  }
+@media (max-width: 1200px) {
 
   #academicprojects .project-items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+    grid-template-columns: repeat(2, 1fr);
 
-@media (max-width: 600px) {
-  #academicprojects .project-items {
-    grid-template-columns: 1fr;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   #academicprojects .genre-filter {
-    gap: 8px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+    flex-wrap: wrap;
   }
 
   #academicprojects .genre-box {
-    min-width: 0;
-    flex: 1 1 calc(50% - 8px);
-    padding: 10px 8px;
-    font-size: 13px;
+    flex: 1 1 20%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  #academicprojects .project-items {
+    grid-template-columns: 1fr;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    padding: 10px;
+  }
+
+  #academicprojects .genre-filter {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    flex-wrap: wrap;
+  }
+
+  #academicprojects .genre-box {
+    flex: 1 1 40%;
   }
 
   #academicprojects .project-image,
   #academicprojects .project-item img {
-    height: 190px;
+    height: 200px;
   }
 }
+
 
 /*Hobby Section*/
 
