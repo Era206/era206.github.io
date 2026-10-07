@@ -1383,40 +1383,48 @@ Non-Government Websites</h4>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-  const genreBoxes = document.querySelectorAll(
-    '#academicprojects .genre-box'
-  );
+  const filters =
+    document.querySelectorAll('.project-status-box');
 
-  const projectItems = document.querySelectorAll(
-    '#academicprojects .project-item'
-  );
+  const projects =
+    document.querySelectorAll('.academic-works .project-item');
 
-  genreBoxes.forEach(box => {
 
-    box.addEventListener('click', function () {
+  filters.forEach(filter => {
 
-      const selectedGenre = this.getAttribute('data-genre');
+    filter.addEventListener('click', function () {
 
-      // Remove selection from every filter
-      genreBoxes.forEach(b => {
-        b.classList.remove('selected');
+      const selectedGenre =
+        this.getAttribute('data-genre');
+
+
+      /* One selected filter only */
+
+      filters.forEach(item => {
+        item.classList.remove('selected');
       });
 
-      // Select the clicked filter
       this.classList.add('selected');
 
-      // Filter projects
-      projectItems.forEach(item => {
 
-        const itemGenre = item.getAttribute('data-genre');
+      /* Show corresponding projects */
+
+      projects.forEach(project => {
+
+        const projectGenre =
+          project.getAttribute('data-genre');
 
         if (
           selectedGenre === 'all' ||
-          itemGenre === selectedGenre
+          projectGenre === selectedGenre
         ) {
-          item.style.display = '';
+
+          project.style.display = 'flex';
+
         } else {
-          item.style.display = 'none';
+
+          project.style.display = 'none';
+
         }
 
       });
