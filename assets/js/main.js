@@ -252,3 +252,17 @@
   new PureCounter();
 
 })()
+// Keep academic genre filtering independent of research status filtering.
+document.querySelectorAll('#academicprojects .academic-project-filter').forEach(filter => {
+  filter.addEventListener('click', () => {
+    const genre = filter.dataset.genre;
+    document.querySelectorAll('#academicprojects .academic-project-filter').forEach(button => {
+      const selected = button === filter;
+      button.classList.toggle('selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+    document.querySelectorAll('#academicprojects .academic-project').forEach(project => {
+      project.hidden = genre !== 'all' && project.dataset.genre !== genre;
+    });
+  });
+});

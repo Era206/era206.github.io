@@ -543,8 +543,8 @@ Non-Government Websites</h4>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const statusBoxes = document.querySelectorAll('.status-box');
-    const workBoxes = document.querySelectorAll('.work-box');
+    const statusBoxes = document.querySelectorAll('#research .status-box');
+    const workBoxes = document.querySelectorAll('#research .work-box');
   
     statusBoxes.forEach(box => {
       box.addEventListener('click', function() {
@@ -571,6 +571,491 @@ Non-Government Websites</h4>
    
             
 
+
+<!-- ======= Academic Projects Section ======= -->
+<section id="academicprojects" class="research academic-projects">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Academic Projects</span>
+      <h2>Academic Projects</h2>
+      <p>
+        A selection of projects I worked on during my undergraduate studies at BUET.
+      </p>
+    </div>
+
+    <!-- =========================
+         PROJECT FILTERS
+    ========================== -->
+
+    <div class="status-container academic-project-filters">
+
+  <button type="button" class="status-box academic-project-filter selected" data-genre="all" aria-pressed="true"><span>All</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="web" aria-pressed="false"><span>Web Development</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="ml" aria-pressed="false"><span>Machine Learning</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="graphics" aria-pressed="false"><span>Graphics</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="security" aria-pressed="false"><span>Security</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="network" aria-pressed="false"><span>Networking</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="compiler" aria-pressed="false"><span>Compiler</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="microcontroller" aria-pressed="false"><span>Microcontroller</span></button>
+
+  <button type="button" class="status-box academic-project-filter" data-genre="algorithm" aria-pressed="false"><span>Algorithms</span></button>
+
+</div>
+
+    <!-- =========================
+         PROJECT ITEMS
+    ========================== -->
+
+    <div class="works academic-works">
+
+      <!-- ====================================================== -->
+      <!-- 1. GoodPanda                                          -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="web">
+
+        <h4>GoodPanda</h4>
+
+        <img src="assets/img/project/goodpanda.png"
+             alt="GoodPanda"
+             class="project-image">
+
+        <p>
+          A food ordering and delivery management system supporting
+          customers, riders, and administrators, with order management,
+          delivery tracking, proof of delivery, and role-based access.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          Java, Spring MVC, JSP, Hibernate, OracleDB, Bootstrap, Apache Tomcat
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/GoodPanda"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 2. BeyondTheSeas                                      -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="web">
+
+        <h4>BeyondTheSeas</h4>
+
+        <img src="assets/img/project/beyondtheseas.png"
+             alt="BeyondTheSeas"
+             class="project-image">
+
+        <p>
+          A higher-education recommendation platform that helps students
+          explore universities based on their academic profiles and
+          preferences, track application deadlines, and participate in
+          a student forum.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          React, Node.js, PostgreSQL, Elasticsearch
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/kayanika/BeyondTheSeas"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+          <a href="https://drive.google.com/file/d/1BUpqZgGLqjvks5suXmQbAEXqTC2b3S7x/view?usp=sharing"
+             class="btn btn-primary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-play"></i> Video Demo
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 3. Mediac                                             -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="web">
+
+        <h4>Mediac</h4>
+
+        <img src="assets/img/project/mediac.png"
+             alt="Mediac Hospital Management System"
+             class="project-image">
+
+        <p>
+          A hospital management system supporting patients, doctors,
+          nurses, receptionists, and administrators, with features for
+          appointments, prescriptions, employee management, and patient
+          information management.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          Node.js, Express.js, EJS, OracleDB, Bootstrap
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/JINZI45/CSE216_TERM-PROJECT"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+          <a href="https://drive.google.com/file/d/1ItlxnbmlJmGtsOFhjPnaj--Lx-eat0U4/view?usp=sharing"
+             class="btn btn-primary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-play"></i> Video Demo
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 4. Bangla Speech Emotion Recognition                  -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="ml">
+
+        <h4>Bangla Speech Emotion Recognition</h4>
+
+        <img src="assets/img/project/speech-emotion.png"
+             alt="Bangla Speech Emotion Recognition"
+             class="project-image">
+
+        <p>
+          A machine learning project for recognizing emotions from
+          Bangla speech, using audio representations and deep learning
+          to classify emotional states from speech recordings.
+          <br/><br/>
+
+          <b>Methods:</b>
+          Mel Spectrogram, Transfer Learning, ResNet18, Deep Learning, Python
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/July-2023-CSE472-Machine-Learning-Sessional/tree/main/ML%20Project"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 5. Ray Tracing Renderer                               -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="graphics">
+
+        <h4>Ray Tracing Renderer</h4>
+
+        <img src="assets/img/project/raytracing.png"
+             alt="Ray Tracing Renderer"
+             class="project-image">
+
+        <p>
+          A ray tracing renderer implemented from scratch to generate
+          scenes containing geometric objects with realistic lighting,
+          shadows, reflections, and illumination effects.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          C++, OpenGL, Ray Tracing
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/CSE410-Computer-Graphics-Sessional/tree/main/Offline3%20-%20Ray%20Tracing"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 6. BeEF                                               -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="security">
+
+        <h4>BeEF – Browser Exploitation Framework</h4>
+
+        <img src="assets/img/project/beef.png"
+             alt="BeEF Browser Security Project"
+             class="project-image">
+
+        <p>
+          A computer security project exploring browser vulnerabilities
+          using the Browser Exploitation Framework (BeEF), with practical
+          demonstrations of browser-based attacks and security risks.
+          <br/><br/>
+
+          <b>Topics:</b>
+          Browser Security, Phishing, Tabnabbing, Clickjacking,
+          Cookies, JavaScript
+          <br/>
+
+          <b>Year:</b> 2023
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/JanCSE406-Computer-Security-Sessional/tree/main/1805104_1805116_Computer_Security_Project"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 7. TCP Vegas-A                                        -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="network">
+
+        <h4>TCP Vegas-A</h4>
+
+        <img src="assets/img/project/tcp-vegas.png"
+             alt="TCP Vegas-A"
+             class="project-image">
+
+        <p>
+          A modified TCP Vegas congestion-control approach developed
+          to improve its congestion-avoidance mechanism and evaluated
+          through simulations in wired and wireless network scenarios.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          C++, NS-2, Tcl, AWK, TCP Congestion Control
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/CSE322-Computer-Networks-Sessional/tree/main/Computer%20Networking%20Project"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 8. Compiler from Scratch                              -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="compiler">
+
+        <h4>Compiler from Scratch</h4>
+
+        <img src="assets/img/project/compiler.png"
+             alt="Compiler from Scratch"
+             class="project-image">
+
+        <p>
+          A compiler developed from scratch across multiple stages,
+          including symbol table construction, lexical analysis,
+          syntax and semantic analysis, and intermediate/target code
+          generation producing assembly code.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          C++, Flex, Bison, Assembly
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/CSE310-Compiler-Sessional"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 9. Networked Car Showroom                             -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="network">
+
+        <h4>Networked Car Showroom</h4>
+
+        <img src="assets/img/project/car-showroom.png"
+             alt="Networked Car Showroom"
+             class="project-image">
+
+        <p>
+          A client-server car showroom application supporting concurrent
+          users and network communication for managing and viewing car
+          information.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          Java, JavaFX, Socket Programming, Multithreading
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/CSE108-Object-Oriented-Programming-Language-Sessional/tree/main/Offline%206%20Threading%20final"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 10. Solar System Simulation                           -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="graphics">
+
+        <h4>Solar System Simulation</h4>
+
+        <img src="assets/img/project/solar-system.jpg"
+             alt="Solar System Simulation"
+             class="project-image">
+
+        <p>
+          An interactive graphical simulation of the solar system,
+          visualizing planets and satellites moving along their
+          respective orbital paths.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          C++, iGraphics, Computer Graphics
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/Era206/CSE102-Structured-Programming-Language-Sessional/tree/main/i%20graphics%20offline"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 11. Red Light, Green Light                            -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="microcontroller">
+
+        <h4>Red Light, Green Light</h4>
+
+        <img src="assets/img/project/light.jpg"
+             alt="Red Light Green Light"
+             class="project-image">
+
+        <p>
+          A microcontroller-based traffic management system consisting
+          of a traffic-light controller for a four-way crossing and an
+          automated barricade controller for trains.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          Arduino UNO R3, IR Sensors, Servo Motor, LED, C++
+          <br/>
+
+          <b>Year:</b> 2022
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/niananto/red-light-green-light"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=9mWLkRmKQEA"
+             class="btn btn-red"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i> Youtube
+          </a>
+
+        </p>
+
+      </div>
+
+      <!-- ====================================================== -->
+      <!-- 12. Maximum Leaf Spanning Tree                        -->
+      <!-- ====================================================== -->
+
+      <div class="work-box academic-project" data-genre="algorithm">
+
+        <h4>Maximum Leaf Spanning Tree (maxLST)</h4>
+
+        <img src="assets/img/project/maxlst.png"
+             alt="Maximum Leaf Spanning Tree"
+             class="project-image">
+
+        <p>
+          An algorithmic project implementing and experimentally
+          evaluating exact, approximation, and heuristic approaches
+          for the Maximum Leaf Spanning Tree (MaxLST) problem.
+          <br/><br/>
+
+          <b>Technologies:</b>
+          C++, Python, Graph Algorithms
+        </p>
+
+        <p class="project-links">
+
+          <a href="https://github.com/skazgor/maxLST"
+             class="btn btn-tertiary"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github
+          </a>
+
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- <section id="academicprojects" class="projects">
   <div class=" container">
