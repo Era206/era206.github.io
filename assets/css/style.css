@@ -1744,7 +1744,35 @@ section {
 # My Project
 --------------------------------------------------------------*/
 
+/* Style for the genre filter container */
+.genre-filter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
 
+.genre-box {
+  
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 30%; /* Set width to take up one-third of the container */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.genre-box.selected {
+  background: #043c3b;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.genre-box:hover {
+  box-shadow: 0 0 15px rgba(11, 168, 71, 0.7);
+}
 /* 
 #fundedprojects {
   padding: 50px 0;
@@ -1872,248 +1900,113 @@ section {
 }
 
 
-/* ==========================================================
-   Academic Projects
-   Styled to match Research Works
-   ========================================================== */
 
-/* ---------- Filter container ---------- */
 
-#academicprojects .genre-filter {
+.project-items {
   display: flex;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-right: 2%;
 }
 
-
-/* ---------- Individual filter ---------- */
-
-#academicprojects .genre-box {
-  background: #ffffff;
-  border: 2px solid #ff5303;
-
-  padding: 10px;
-  flex: 1;
-
-  text-align: center;
-  cursor: pointer;
-
-  box-shadow: 0 0 15px rgba(255, 180, 5, 0.7);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
-}
-
-
-/* Same hover behavior as Research Works */
-
-#academicprojects .genre-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(255, 18, 1, 0.6);
-}
-
-
-/* Selected filter = same orange as Research */
-
-#academicprojects .genre-box.selected {
-  background: #e14e09;
-  color: #ffffff;
-
+.project-item {
+  background-color: #fff;
   border: 1px solid #ddd;
-
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
-  transform: none;
-}
-
-
-/* ---------- Projects grid ---------- */
-
-#academicprojects .project-items {
-  display: grid;
-
-  /*
-   Same principle as .works in Research Works.
-   3 cards per row on normal desktop screens.
-  */
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 30px;
-
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
-
-  margin-left: 9rem;
-  margin-right: 8rem;
-  margin-top: 2rem;
+  width: calc(33.333% - 20px); /* Adjust the width as needed */
+  box-sizing: border-box;
+  transition: transform 0.2s;
 }
 
-
-/* ---------- Individual project card ---------- */
-
-#academicprojects .project-item {
-  background: #f9f9f9;
-
-  border: 1px solid #ddd;
-  border-radius: 5px;
-
-  padding: 20px;
-
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-
-  width: auto;
+.project-item:hover {
+  transform: translateY(-5px);
 }
 
-
-/* EXACT same hover style as Research Works */
-
-#academicprojects .project-item:hover {
-  transform: translateY(-10px);
-
-  box-shadow:
-    0 0 30px rgba(0, 0, 0, 0.6);
+.project-item h3 {
+  margin-top: 0;
 }
 
-
-/* ---------- Project title ---------- */
-
-/*
-This deliberately overrides project-name1,
-project-name2, etc. so every project follows
-the Research Works visual language.
-*/
-
-#academicprojects .project-name1,
-#academicprojects .project-name2,
-#academicprojects .project-name3,
-#academicprojects .project-name4,
-#academicprojects .project-name5 {
-  font-family: "Raleway", sans-serif;
-
-  font-size: 1.5em;
-  font-weight: 500;
-
-  color: rgb(27, 36, 26);
-
-  margin: 0 0 15px 0;
-  padding: 0;
-
-  display: block;
-
-  background: none;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-
-  text-shadow: none;
+.project-item p {
+  margin-bottom: 0;
 }
 
-
-/* ---------- Images ---------- */
-
-/*
-Every project image gets EXACTLY the same
-display area regardless of original dimensions.
-*/
-
-#academicprojects .project-image,
-#academicprojects .project-item img {
-  display: block;
-
+.project-item img {
   width: 100%;
-  height: 230px;
-
-  object-fit: contain;
-
-  margin: 0 0 20px 0;
-
+  
+  align-items: center;
   border-radius: 5px;
+  margin-top: 3%;
+  margin-bottom: 7%;
+ 
+}
 
-  background: #ffffff;
+.project-name1 {
+  font-family: 'Cursive', sans-serif; /* Use a fancy font */
+  font-size: 24px; /* Increase the font size */
+  color: #4A90E2; /* Set a custom color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a text shadow */
+  background: linear-gradient(45deg, #5601ff, #ff0191); /* Add a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  padding: 10px; /* Add some padding */
+  border-radius: 8px; /* Round the corners */
+  display: inline-block; /* Make the element inline-block */
+}
+
+.project-name2 {
+  font-family: 'Cursive', sans-serif; /* Use a fancy font */
+  font-size: 24px; /* Increase the font size */
+  color: #4A90E2; /* Set a custom color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a text shadow */
+  background: linear-gradient(45deg, #00fe1e, #ff0101); /* Add a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  padding: 10px; /* Add some padding */
+  border-radius: 8px; /* Round the corners */
+  display: inline-block; /* Make the element inline-block */
 }
 
 
-/* ---------- Project text ---------- */
-
-#academicprojects .project-item p {
-  font-size: 1em;
-  color: #333;
-
-  line-height: 1.5;
-
-  margin-bottom: 10px;
+.project-name3 {
+  font-family: 'Cursive', sans-serif; /* Use a fancy font */
+  font-size: 24px; /* Increase the font size */
+  color: #4A90E2; /* Set a custom color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a text shadow */
+  background: linear-gradient(45deg, #faa303, #1c4a05); /* Add a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  padding: 10px; /* Add some padding */
+  border-radius: 8px; /* Round the corners */
+  display: inline-block; /* Make the element inline-block */
 }
 
-
-/* ---------- Buttons ---------- */
-
-#academicprojects .project-item .btn {
-  margin-left: 0;
-  margin-right: 5px;
-  margin-top: 5px;
+.project-name4 {
+  font-family: 'Cursive', sans-serif; /* Use a fancy font */
+  font-size: 24px; /* Increase the font size */
+  color: #4A90E2; /* Set a custom color */
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.2); /* Add a text shadow */
+  background: linear-gradient(45deg, #0334fa, #ff0000); /* Add a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  padding: 10px; /* Add some padding */
+  border-radius: 8px; /* Round the corners */
+  display: inline-block; /* Make the element inline-block */
 }
 
-
-/* ==========================================================
-   Responsive
-   ========================================================== */
-
-@media (max-width: 1200px) {
-
-  #academicprojects .project-items {
-    grid-template-columns: repeat(2, 1fr);
-
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
-  #academicprojects .genre-filter {
-    margin-left: 3rem;
-    margin-right: 3rem;
-
-    flex-wrap: wrap;
-  }
-
-  #academicprojects .genre-box {
-    flex: 1 1 20%;
-  }
+.project-name5 {
+  font-family: 'Cursive', sans-serif; /* Use a fancy font */
+  font-size: 24px; /* Increase the font size */
+  color: #4A90E2; /* Set a custom color */
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.2); /* Add a text shadow */
+  background: linear-gradient(30deg, #fa0303, #00ff2a); /* Add a gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  padding: 10px; /* Add some padding */
+  border-radius: 8px; /* Round the corners */
+  display: inline-block; /* Make the element inline-block */
 }
-
-
-@media (max-width: 768px) {
-
-  #academicprojects .project-items {
-    grid-template-columns: 1fr;
-
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-    padding: 10px;
-  }
-
-  #academicprojects .genre-filter {
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-    flex-wrap: wrap;
-  }
-
-  #academicprojects .genre-box {
-    flex: 1 1 40%;
-  }
-
-  #academicprojects .project-image,
-  #academicprojects .project-item img {
-    height: 200px;
-  }
-}
-
 
 /*Hobby Section*/
 
